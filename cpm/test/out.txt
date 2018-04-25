@@ -1,0 +1,24 @@
+digraph {
+  BoilAll [label = "BoilAll(30)", color = red]
+  BoilMeat [label = "BoilMeat(60)", color = red]
+  BuyFood [label = "BuyFood(30)", color = red]
+  CutCabbage [label = "CutCabbage(10)"]
+  CutMeat [label = "CutMeat(5)", color = red]
+  CutOnion [label = "CutOnion(3)"]
+  CutPotatoes [label = "CutPotatoes(5)"]
+  FryOnion [label = "FryOnion(8)"]
+  PeelPotatoes [label = "PeelPotatoes(5)"]
+  ServeUp [label = "ServeUp(1)", color = red]
+  BoilAll -> ServeUp [color = red]
+  BoilMeat -> BoilAll [color = red]
+  BuyFood -> CutCabbage
+  BuyFood -> CutMeat [color = red]
+  BuyFood -> CutOnion
+  BuyFood -> PeelPotatoes
+  CutCabbage -> BoilAll
+  CutMeat -> BoilMeat [color = red]
+  CutOnion -> FryOnion
+  CutPotatoes -> BoilAll
+  FryOnion -> ServeUp
+  PeelPotatoes -> CutPotatoes
+}
